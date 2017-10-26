@@ -23,6 +23,7 @@ import ie.cit.SOFT8027.Assignment1.domain.Functions;
 import ie.cit.SOFT8027.Assignment1.domain.Menu;
 import ie.cit.SOFT8027.Assignment1.domain.Player;
 import ie.cit.SOFT8027.Assignment1.domain.Queries;
+import ie.cit.SOFT8027.Assignment1.domain.TheGame;
 import ie.cit.SOFT8027.Assignment1.domain.Weapon;
 import ie.cit.SOFT8027.Assignment1.rowmappers.PlayerRowMapper;
 
@@ -48,6 +49,9 @@ public class ApplicationTest implements CommandLineRunner{
 	
 	@Autowired
 	Menu intialMenu;
+	
+	@Autowired
+	TheGame theGame;
 	
 	@Override
 	public void run(String... arg0) throws Exception {
@@ -108,7 +112,7 @@ public class ApplicationTest implements CommandLineRunner{
 			System.out.println(" ---  KYLAR'S  VENGEANCE ---");
 			
 			System.out.println("   Main  Menu   ");
-			System.out.println("1. Finish Round");
+			System.out.println("1. Play a round");
 			System.out.println("2. Buy new equipment");
 			System.out.println("3  Sell equipment");
 			System.out.println("4. Upgrade equipment");
@@ -121,7 +125,7 @@ public class ApplicationTest implements CommandLineRunner{
 			do {
 				switch (choice){
 				case "1":
-					System.out.println("choice 1");
+					theGame.theGame();
 					break;
 				case "2":
 					function.buyEquipment();
