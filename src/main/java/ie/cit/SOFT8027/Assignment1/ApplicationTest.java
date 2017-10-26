@@ -99,7 +99,9 @@ public class ApplicationTest implements CommandLineRunner{
 				mainMenu();
 				break;
 			case "Exit":
-				return;
+				System.exit(0);
+				//return;
+				break;
 			}
 		}while (choice != "Exit");
 	}
