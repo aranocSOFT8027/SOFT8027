@@ -27,7 +27,6 @@ public class Menu {
 		System.out.println("         WLECOME  TO  . . . . . .  \n");
 		System.out.println("    ---  KYLAR'S  VENGEANCE ---\n");
 		System.out.println("*** enter 'play' to start game  ****\n");
-		//System.out.println(" If you dont't have one enterthe key word 'new'\n");
 		
 		
 		Scanner scan = new Scanner(System.in);
@@ -35,7 +34,6 @@ public class Menu {
 		do {
 			switch (choice){
 			case "play":
-				//need to add code to search for user ID and display it with the main menu
 				Menu menu = new Menu();
 				menu.mainMenu();
 				break;
@@ -47,9 +45,7 @@ public class Menu {
 	
 	public void mainMenu(){
 		
-	//ApplicationTest test = new ApplicationTest();
 		queries.playerQuery();
-		//Functions function = new Functions();
 		System.out.println(" ---  KYLAR'S  VENGEANCE ---");
 		
 		System.out.println("   Main  Menu   ");
@@ -77,7 +73,6 @@ public class Menu {
 			case "4":
 				System.out.println("\n Upgrade menu \n");
 				function.upgradeEquipment();
-				//upgradeMenu();
 				break;
 			case "5":
 				queries.playerQuery();
@@ -107,7 +102,6 @@ public class Menu {
 		do {
 			switch (choice){
 			case "weapon":
-				//System.out.println("boogaly boo");
 				function.displayAllWeapons();
 				function.upgradeEquipment();  
 				break;

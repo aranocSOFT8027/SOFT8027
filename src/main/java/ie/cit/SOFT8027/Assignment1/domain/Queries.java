@@ -34,29 +34,8 @@ public class Queries {
 				
 		@Autowired
 		JdbcTemplate jdbcTemplate;
-		
-		//@Autowired		
-		public void query01(){
-			//Query for a list of maps with key-value pairs
-			//The hard way!!
-			
-			System.out.println("\nQuery 1 (List all players using resultset Map)\n---------------");
-			
-			String sql = "SELECT * FROM players WHERE id = 1";
-			List<Map<String, Object>> resultSet = jdbcTemplate.queryForList(sql);
-			
-			for (Map<String, Object> row : resultSet) {
-				System.out.println("Name: " + row.get("name"));
-				System.out.println("ID: " + row.get("id"));
-				System.out.println("UserName " + row.get("userName"));
-				System.out.println("Coin sack: " + row.get("coinSack"));
-			}
-			System.out.println("\n ----------------------      ");
-		}
-		//@Autowired
+
 		public void playerQuery(){
-			//Query for a list of maps with key-value pairs
-			//The hard way!!
 			
 			System.out.println("\nQuery 1 (List player 1  and weapons using result set Map)\n---------------");
 			
@@ -70,7 +49,6 @@ public class Queries {
 				System.out.println("Coin sack: " + row.get("coinSack"));
 			}
 			equipmentList();
-			//System.out.println("\n----------------------      ");
 		}
 		
 		public void equipmentList(){
@@ -138,7 +116,6 @@ public class Queries {
 		
 		public void displayAllWeapons(){
 			
-			//this code works when it is placed in the ApplicationTest class
 			String sql = "SELECT * FROM weapons";
 			System.out.println("Equipment");
 
@@ -156,7 +133,6 @@ public class Queries {
 		
 		public void displayAllArmour() {
 			
-			//this code works when it is placed in the ApplicationTest class
 			String sql = "SELECT * FROM armour";
 			System.out.println("Equipment");
 

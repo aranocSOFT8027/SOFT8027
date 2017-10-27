@@ -27,9 +27,9 @@ public class TheGame {
 		
 		System.out.println("And so it begins. . . . .");
 		System.out.println("You have 3 choices young warior");
-		System.out.println("North");
-		System.out.println("East");
-		System.out.println("West");
+		System.out.println("'North'");
+		System.out.println("'East'");
+		System.out.println("'West'");
 		System.out.println("CHOOSE NOW!!");
 		String sqlToll = "UPDATE players SET coinSack = coinsack - 2";
 		int resultSetCoinSack = jdbcTemplate.update(sqlToll);
@@ -49,14 +49,14 @@ public class TheGame {
 				System.out.println("WAIT. . . ");
 				System.out.println("Oh no");
 				System.out.println("Its GENIT ALSWEAT");
-				System.out.println("Do we run or fight?");
+				System.out.println("Do we 'run' or 'fight'?");
 				String choice1 = scan.nextLine();
 				if (choice1.equals("run")){
 					System.out.println("That was close");
 					applicationTest.mainMenu();
 				} else
 				if (choice1.equals("fight")){
-						System.out.println("where do we attack? High, Low or Middle?");
+						System.out.println("where do we attack? 'High', 'Low' or 'Middle'?");
 						String fightChoice = scan.nextLine();
 							if (fightChoice.equals("High")){
 								System.out.println("Dam that didnt work! We must run away!");
@@ -85,14 +85,14 @@ public class TheGame {
 				System.out.println("God dam it. . . . we snaged his hare trap");
 				System.out.println("Its Dick!");
 				System.out.println("He's bigger and blacker than I'd imagined");
-				System.out.println("Do we run or fight?");
+				System.out.println("Do we 'run' or 'fight'?");
 				String choice2 = scan.nextLine();
 				if (choice2.equals("run")){
 					System.out.println("That was close");
 					applicationTest.mainMenu();
 				} else
 				if (choice2.equals("fight")){
-						System.out.println("where do we attack? High, Low or Middle?");
+						System.out.println("where do we attack? 'High', 'Low' or 'Middle'?");
 						String fightChoice = scan.nextLine();
 							if (fightChoice.equals("High")){
 								System.out.println("Nailed it!!");
@@ -120,14 +120,14 @@ public class TheGame {
 				System.out.println("For she is the high priestess of the hexenbeast council");
 				System.out.println("What is that sound. . . .");
 				System.out.println("She is behind us, strick at her weapons befor its to late!!");
-				System.out.println("Do we run or fight?");
+				System.out.println("Do we 'run' or 'fight'?");
 				String choice3 = scan.nextLine();
 				if (choice3.equals("run")){
 					System.out.println("That was close");
 					applicationTest.mainMenu();
 				} else
 				if (choice3.equals("fight")){
-						System.out.println("where do we attack? High, Low or Middle?");
+						System.out.println("where do we attack? 'High', 'Low' or 'Middle'?");
 						String fightChoice = scan.nextLine();
 							if (fightChoice.equals("High")){
 								System.out.println("Don't look down or the cresvis will consume you! Away!!");

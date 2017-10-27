@@ -56,37 +56,14 @@ public class ApplicationTest implements CommandLineRunner{
 	@Override
 	public void run(String... arg0) throws Exception {
 		
-		//functions.buyEquipment(); the code works when called here but not through the case menu
-		//upgradeMenu();
 		initialMenu();
-		//mainMenu();
-		//initialMenu();
-		//buyEquipment();
-		//sellEquipment();
-		//upgradeEquipment();
-		//Menu menu = new Menu();
-		//menu.initialMenu();
-		//displayAllWeapons();
-		//playerQuery();
-		//Functions displayAllWeapons = new Functions();
-		//displayAllWeapons.displayAllWeapons();
-		//equipmentList();
-		//equipmentList1();
-		//equipmentList2();
-		//equipmentList3();
-		//playerQuery();
-		//menu.mainMenu();
-		//Player player = new Player();
-		//Menu menu = new Menu();
-		//menu.initialMenu();
-		//player.toString();
 	}	
 	
 	public void initialMenu(){
 		System.out.println("         WLECOME  TO  . . . . . .  \n");
 		System.out.println("    ---  KYLAR'S  VENGEANCE ---\n");
 		System.out.println("*** enter 'play' to start game  ****\n");
-		//System.out.println(" If you dont't have one enterthe key word 'new'\n");
+		
 		
 		
 		Scanner scan = new Scanner(System.in);
@@ -94,23 +71,17 @@ public class ApplicationTest implements CommandLineRunner{
 		do {
 			switch (choice){
 			case "play":
-				//need to add code to search for user ID and display it with the main menu
-				//Menu menu = new Menu();
 				mainMenu();
 				break;
 			case "Exit":
 				System.exit(0);
-				//return;
 				break;
 			}
 		}while (choice != "Exit");
 	}
 	
 	public void mainMenu(){
-		
-		//ApplicationTest test = new ApplicationTest();
-			//queries.playerQuery();
-			//Functions function = new Functions();
+
 			System.out.println(" ---  KYLAR'S  VENGEANCE ---");
 			
 			System.out.println("   Main  Menu   ");
@@ -119,8 +90,8 @@ public class ApplicationTest implements CommandLineRunner{
 			System.out.println("3  Sell equipment");
 			System.out.println("4. Upgrade equipment");
 			System.out.println("5. Player info ");
-			System.out.println("  Help ");
-			System.out.println("  Exit ");
+			System.out.println("  'Help' ");
+			System.out.println("  'Exit' ");
 			
 			Scanner scan = new Scanner(System.in);
 			String choice = scan.nextLine();
@@ -148,10 +119,12 @@ public class ApplicationTest implements CommandLineRunner{
 					initialMenu();
 				case "Help":
 
-					System.out.println("     When inputting selections keep an eye on the case of the displayed words" );
-					System.out.println("   sometimes you will need to have a capital for the first word of the selection   ");
-					System.out.println("  but if you are reading the instruction on screen you should be able to realise");
-					System.out.println("                  when you need lowercase or uppercase letters\n");
+					System.out.println("     When inputting selections keep an eye on the words incased in quotation marks" );
+					System.out.println("     sometimes you will need to have a capital for the first word of the selection   ");
+					System.out.println("         but if you are reading the instruction on screen you should be able");
+					System.out.println("              to realise when you need lowercase or uppercase letters.");
+					System.out.println("        Where numbers are used in the display those should be used for selection.");
+					System.out.println("                         To exit from any menu type 'Exit'.\n");
 					System.out.println("                   ^^^^                    ^^^^  ");					
 					System.out.println("                    (\")                     (\")  \n");
 					System.out.println("  	 	                 ''  ");
@@ -159,7 +132,7 @@ public class ApplicationTest implements CommandLineRunner{
 					System.out.println("  		         \\_______________/	     ");
 					System.out.println("  		          \\_____________/	     ");
 					System.out.println("  		           \\___________/	     \n");
-					System.out.println(" Exit \n");
+					System.out.println(" 'Exit' \n");
 					mainMenu();
 					break;				
 				}
