@@ -29,12 +29,12 @@ public class Functions {
     //@Autowired
 	public void buyEquipment(){
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Would you like to buy a weapon or some armour? input weapon or armour");
+		System.out.println("Would you like to buy a weapon or some armour? input 'weapon' or 'armour'");
 		String choice = scan.nextLine();
 		do {
 			switch(choice){
 			case "weapon":
-				System.out.println("Is it your primary or secondary weapon?");
+				System.out.println("Is it your 'primary' or 'secondary' weapon?");
 				String option = scan.nextLine();
 				if(option.equals("primary")){
 					displayAllWeapons();
@@ -165,7 +165,7 @@ public class Functions {
 			break;
 			case "armour":
 
-				System.out.println("Is it your armour1 or armour2?");
+				System.out.println("Is it your 'armour1' or 'armour2'?");
 				String option1 = scan.nextLine();
 				if(option1.equals("armour1")){
 					displayAllArmour();
@@ -301,7 +301,11 @@ public class Functions {
 	
 	public void sellEquipment(){
 		queries.playerQuery();
-		System.out.println("Which of your items you'd like to sell");
+		System.out.println("Which of your items you'd like to sell? \n Enter your selection from the list below:");
+		System.out.println("'Primary weapon'");
+		System.out.println("'Secondary weapon'");
+		System.out.println("'armour1'");
+		System.out.println("'armour2'");
 		Scanner scan = new Scanner(System.in);
 		String choice = scan.nextLine();
 				if (choice.equals("Primary weapon")){
@@ -376,7 +380,7 @@ public class Functions {
 
 	
 	public void upgradeEquipment(){
-		System.out.println("Would you like to upgrade your weapons or armour");
+		System.out.println("Would you like to upgrade your 'weapons' or 'armour'");
 		Scanner scan = new Scanner(System.in);
 		String input = scan.nextLine();
 		do {
