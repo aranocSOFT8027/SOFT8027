@@ -1,4 +1,4 @@
-INSERT INTO players VALUES(1,'Desmond Tutu','DezzyD',45);
+INSERT INTO players VALUES(1,'Desmond Tutu','DezzyD',15);
 
 INSERT INTO weapons VALUES(1,'Popes Staff', 1, 'Staff',2,1),(2,'pickely bastard',2,'mace',2,1),
 				(3,'Giglamesh bane',2,'sword',3,1),(4,'Dark Slayer',2,'crossbow',1,1);

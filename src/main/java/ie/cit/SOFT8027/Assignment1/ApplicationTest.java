@@ -60,11 +60,17 @@ public class ApplicationTest implements CommandLineRunner{
 	}	
 	
 	public void initialMenu(){
+		String coinSackQuery = "SELECT coinSack FROM players WHERE id = 1";
+		
+		List<Map<String, Object>> resultSet2 = jdbcTemplate.queryForList(coinSackQuery);
+		for (Map<String, Object> row : resultSet2) {
+			Object coinSack1 = row.get("coinSack");
+			int coinSackInt = (int) coinSack1;
+		
+		if (coinSackInt >= 1){
 		System.out.println("         WLECOME  TO  . . . . . .  \n");
 		System.out.println("    ---  KYLAR'S  VENGEANCE ---\n");
 		System.out.println("*** enter 'play' to start game  ****\n");
-		
-		
 		
 		Scanner scan = new Scanner(System.in);
 		String choice = scan.nextLine();
@@ -79,6 +85,14 @@ public class ApplicationTest implements CommandLineRunner{
 				break;
 			}
 		}while (choice != "Exit");
+		} else { 
+			System.out.println("\n   ************************************************ \n");
+			System.out.println("                       YOU LOSE");
+			System.out.println("\n   ************************************************ \n");
+			System.exit(0);
+			}
+		}
+		
 	}
 	
 	public void mainMenu(){

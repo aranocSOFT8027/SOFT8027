@@ -429,14 +429,6 @@ public class Functions {
 			}
 		}while (input != "weapon &| armour");
 	}
-	/*
-	public void youLose(){
-		String coinSack = "SELECT coinSack FROM player WHERE id = 1";
-		if (coinSack == null)
-			System.out.println("             YOU  LOSE ");
-			System.exit(0);
-		
-	}*/
 	
 	public void displayAllWeapons(){
 		
