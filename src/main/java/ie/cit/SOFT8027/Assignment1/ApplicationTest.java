@@ -71,7 +71,8 @@ public class ApplicationTest implements CommandLineRunner{
 		do {
 			switch (choice){
 			case "play":
-				mainMenu();
+				theGame.theGame();
+				//mainMenu();
 				break;
 			case "Exit":
 				System.exit(0);
@@ -92,9 +93,10 @@ public class ApplicationTest implements CommandLineRunner{
 			System.out.println("5. Player info ");
 			System.out.println("  'Help' ");
 			System.out.println("  'Exit' ");
-			
+			Boolean go;
 			Scanner scan = new Scanner(System.in);
 			String choice = scan.nextLine();
+			do{
 			do {
 				switch (choice){
 				case "1":
@@ -102,6 +104,7 @@ public class ApplicationTest implements CommandLineRunner{
 					break;
 				case "2":
 					function.buyEquipment();
+					go = true;
 					break;
 				case "3":
 					function.sellEquipment();
@@ -109,7 +112,7 @@ public class ApplicationTest implements CommandLineRunner{
 				case "4":
 					System.out.println("\n Upgrade menu \n");
 					function.upgradeEquipment();
-					//upgradeMenu();
+					go = true;
 					break;
 				case "5":
 					queries.playerQuery();
@@ -137,7 +140,10 @@ public class ApplicationTest implements CommandLineRunner{
 					break;				
 				}
 			} while (choice != "6");
-		}
-		
-	
+		} while (go = false);
+			if (go = true){
+				initialMenu();
+			};
+	  
+	}
 }

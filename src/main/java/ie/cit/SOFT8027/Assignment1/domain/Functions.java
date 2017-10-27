@@ -159,9 +159,7 @@ public class Functions {
 										} 
 									}	
 				}
-				//playerQuery();
-				buyEquipment();
-				
+				applicationTest.initialMenu();
 			break;
 			case "armour":
 
@@ -288,10 +286,9 @@ public class Functions {
 										}
 									}	
 				}
-				//playerQuery();
-				buyEquipment();
-			
-			break;
+				
+				applicationTest.initialMenu();			
+				break;
 			case "Exit":
 			applicationTest.mainMenu();
 			}
@@ -373,8 +370,7 @@ public class Functions {
 										}
 					
 		System.out.println("\n");
-		//playerQuery();
-		sellEquipment();
+		applicationTest.initialMenu();
 		
 	}
 
@@ -389,7 +385,6 @@ public class Functions {
 				//playerQuery();
 				displayAllWeapons(); //
 				System.out.println("Select the item you want to upgrade by number");
-				//Scanner scan = new Scanner(System.in);
 				String choice1 = scan.nextLine();
 				if (choice1.equals("Exit")) {
 					applicationTest.mainMenu();
@@ -399,8 +394,6 @@ public class Functions {
 				
 				String sql1 = "UPDATE WEAPONS SET level = level + 1, worth = worth + worth WHERE id = " + choice1;
 				String cost = "SELECT WORTH FROM WEAPONS";
-				//for the buying and selling fuctions I will need to write a select query befor the update query to get the current value 
-				//of the given item (save it to a vairiable) and add or subtract it from the players coinSack then carry out the function 
 				String sqlCost = "UPDATE PLAYERs SET coinSack = coinsack - " + cost + " WHERE id = " + uCostid;
 				
 				int resultSet1 = jdbcTemplate.update(sql1);  // updates the DB
@@ -408,16 +401,13 @@ public class Functions {
 				System.out.println("\n");
 				displayAllWeapons();
 				System.out.println("\n");
-				//playerQuery();
 				
-				upgradeEquipment();
+				applicationTest.initialMenu();
 				}
 				break;
 			case "armour":
-				//playerQuery();
 				displayAllArmour(); //
 				System.out.println("Select the item you want to upgrade by number");
-				//Scanner scan = new Scanner(System.in);
 				String choice2 = scan.nextLine();
 				String uCostid2 = choice2;
 				
@@ -431,20 +421,25 @@ public class Functions {
 				displayAllArmour();
 				System.out.println("\n");
 				
-				//playerQuery();
+				applicationTest.initialMenu();
 				
-				upgradeEquipment();
 				break;
-			case "Exit":
-				
+			case "Exit":				
 				applicationTest.mainMenu();
 			}
 		}while (input != "weapon &| armour");
-	
 	}
+	/*
+	public void youLose(){
+		String coinSack = "SELECT coinSack FROM player WHERE id = 1";
+		if (coinSack == null)
+			System.out.println("             YOU  LOSE ");
+			System.exit(0);
+		
+	}*/
+	
 	public void displayAllWeapons(){
 		
-		//this code works when it is placed in the ApplicationTest class
 		String sql = "SELECT * FROM weapons";
 		System.out.println("Equipment");
 
@@ -461,7 +456,6 @@ public class Functions {
 	
 	public void displayAllArmour() {
 		
-		//this code works when it is placed in the ApplicationTest class
 		String sql = "SELECT * FROM armour";
 		System.out.println("Equipment");
 
